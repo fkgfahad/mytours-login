@@ -1,0 +1,148 @@
+@charset "UTF-8";
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body {
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(bg.jpg) no-repeat center;
+  background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(bg.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+img[alt="www.000webhost.com"] {display:none;}
+.logo {height: 80px;margin: 0 auto 5px auto;text-align: center;width: auto;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+.login-header {display: block;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.login-header h1 {color: #dc8aec;text-align: center;font-size: 55px;font-family: 'Bevan', cursive;}
+img {width: 100%;}
+a {color: #dc8aec;text-decoration: none;}
+.design {
+  height: auto;
+  width: 400px;
+}
+.login {
+  background-color: #00000080;
+}
+.login-bottom {
+  margin: 10px 0;
+}
+.regnfor {margin: 10px 0;}
+.regnfor a:first-child {}
+.regnfor a:last-child {
+  float: right;
+}
+form {margin: 10px;}
+fieldset {border: 0;}
+input {border: none;}
+input:not([type="checkbox"]) {width: 100%;}
+
+input[type="text"], input[type="password"] {
+  margin: 10px 0;
+  font-size: 15px;
+  padding: 10px;
+  background: transparent;
+  border-bottom: 1px solid #868686;
+  color: #fff;
+}
+input[type="checkbox"] {
+  padding: 4px;
+}
+input[type="submit"] {
+  padding: 10px 0;
+  margin: 20px 0;
+  background-color: #db21ffb3;
+  font-size: 130%;
+  color: #fff;
+  cursor: pointer;
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
